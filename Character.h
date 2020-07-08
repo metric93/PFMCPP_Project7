@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Item.h"
+#include "Utility.h"
 
 struct Character
 {
@@ -22,7 +23,8 @@ struct Character
     
     virtual void attack( Character& other );
     void defend();
-    
+    void levelUp(int& currentStat, int& initialStat);
+
     void help( Character& other );
     
     int takeDamage(int damage);
@@ -57,6 +59,8 @@ struct Character
     {
         std::cout << getName() << "'s stats: " << std::endl;
         std::cout << getStats(); //make your getStats() use a function from the Utility.h
+
+
         
         std::cout << std::endl;
         std::cout << std::endl;
