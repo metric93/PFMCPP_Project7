@@ -6,6 +6,7 @@
 #include <iostream>
 
 #include "Item.h"
+#include "Utility.h"
 
 struct Character
 {
@@ -20,7 +21,10 @@ struct Character
     virtual const std::string& getName() = 0;
     virtual std::string getStats() = 0;
     
+    void levelUp(int& initialHitPoints, int& newHitPoints);
     virtual void attack( Character& other );
+
+    
     void defend();
     
     void help( Character& other );
