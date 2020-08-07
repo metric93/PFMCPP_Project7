@@ -5,6 +5,6 @@
 
 struct AttackItem : public Item
 {
-    AttackItem() : Item("helpful item", 2) { }
+    AttackItem() : Item("attack item", 10) { } //Boost of 10
     void use(Character* character) override;
 };

@@ -103,7 +103,7 @@ void useAttackItem(Character* character, Item* item)
         //this means you need to GET the attack damage, multiply it by the item's boost, and BOOST the attackDamage with that multiplied value.  
         //check Character.h for available member functions you can use.
 
-        dragonSlayer->boostAttackDamage(dragonSlayer->getAttackDamage() * item->getBoost());
+        dragonSlayer->boostAttackDamage(dragonSlayer->getAttackDamage() * item->getBoost()); //The Attack Items Boost Value is set to 10
 
     }
     else if( auto* ch = dynamic_cast<Dragon*>(character) )
