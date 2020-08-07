@@ -4,7 +4,7 @@
 #include "AttackItem.h"
 
 
-struct DragonSlayer : Character
+struct DragonSlayer : public Character
 {
     DragonSlayer(std::string name_, int hp_, int armor_); 
 

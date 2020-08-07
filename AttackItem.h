@@ -3,7 +3,7 @@
 #include "Character.h"
 
 
-struct AttackItem : Item
+struct AttackItem : public Item
 {
     AttackItem() : Item("helpful item", 2) { }
     void use(Character* character) override;

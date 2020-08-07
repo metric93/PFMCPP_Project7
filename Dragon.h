@@ -2,7 +2,7 @@
 
 #include "Character.h"
 
-struct Dragon : Character
+struct Dragon : public Character
 {
     Dragon(std::string name_, int hp_, int armor_);   //name, hit points, armor. 
     void attack(Character& other) override;
