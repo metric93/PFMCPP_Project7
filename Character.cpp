@@ -34,6 +34,9 @@ void Character::attack( Character& other )
         //if you kill other, you get a boost in hit points and armor.
         attackInternal(other);
     }
+
+    
+
 }
 
 void Character::defend()
