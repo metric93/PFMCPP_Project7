@@ -3,7 +3,7 @@
 #include "Utility.h"
 
 DragonSlayer::DragonSlayer (std::string name_, int hp_, int armor_):
-Character(hp_, armor_, 80),
+Character(hp_, armor_, 4),
 name { name_ }
 {
     helpfulItems = makeHelpfulItems(2);
@@ -25,6 +25,7 @@ void DragonSlayer::attack(Character& other)
         //so they should USE their attack item before attacking the dragon... 
         //
         attackItem->use(this); //call the AttackItems use function on the DragonSlayer
+        attackItem.reset();
 
         while( dragon->getHP() > 0 )
         {
